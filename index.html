@@ -3,22 +3,85 @@
     <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
     <title>Pwn Corner</title>
     <style>
+         /* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
 
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+} 
     </style>
     <script>
 
     </script>
 <body>
-<h1>Sifu's Pwning Corner</h1>
 
-<p>Welcome to my webpage where you will find writeups for challenges mostly from TryHackMe or HackTheBox.</p>
-<a href="Relevant/relevant.html">Relevant Writeup</a>
+
+
+<div class="sidebar">
+    <a href="Relevant/relevant.html">Relevant Writeup</a>
+    <br/>
+    <a href="Daily_Bugle/daily_Bugle.html">Daily Bugle Writeup</a>
+    <br/>
+    <a href="anonymous/anonymous.html">Anonymous Writeup</a>
+    <br/>
+</div>
 <br/>
-<a href="Daily_Bugle/daily_Bugle.html">Daily Bugle Writeup</a>
-<br/>
-<a href="anonymous/anonymous.html">Anonymous Writeup</a>
-<br/>
-<script src="https://tryhackme.com/badge/32856"></script>
+<div class="content">
+    <h1>Sifu's Pwning Corner</h1>
+    <p>Welcome to my webpage where you will find writeups for challenges mostly from TryHackMe or HackTheBox.</p>
+    <script src="https://tryhackme.com/badge/32856"></script>
+</div>
+
 
  
 </body>
